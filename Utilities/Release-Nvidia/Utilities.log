@@ -1,0 +1,11 @@
+﻿  esShader.cpp
+  esUtil.cpp
+  esUtil_win.cpp
+  U_Math.cpp
+C:\Users\QuanLe\Desktop\New folder\Utilities\src\U_Math.cpp(7,13): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\QuanLe\Desktop\New folder\Utilities\src\U_Math.cpp(101,13): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\QuanLe\Desktop\New folder\Utilities\src\U_Math.cpp(205,13): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+  TGA.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1551,5): warning MSB8012: TargetPath(C:\Users\QuanLe\Desktop\New folder\BIN-Nvidia\Utilities.lib) does not match the Library's OutputFile property value (C:\Users\QuanLe\Desktop\New folder\BIN-Nvidia\UtilitiesR.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1553,5): warning MSB8012: TargetName(Utilities) does not match the Library's OutputFile property value (UtilitiesR). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  Utilities.vcxproj -> C:\Users\QuanLe\Desktop\New folder\BIN-Nvidia\Utilities.lib
