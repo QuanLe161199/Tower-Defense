@@ -89,6 +89,9 @@ void Enemy::Update(GLfloat deltaTime)
 			m_isAlive = false;
 		}
 
+		//distance of enemy
+		m_distance += m_speed * deltaTime;
+
 		// change position of enemy
 		m_main->Set2DPosition(m_x, m_y - m_height / POSITIONING_ADJUSTMENT_FACTOR);
 		m_shadow->Set2DPosition(m_x, m_y + m_height / POSITIONING_ADJUSTMENT_FACTOR / 2);

@@ -29,6 +29,7 @@ public:
 	float m_amountError; //the amount of error with the map point when moving
 	float m_appearTime;
 	float m_currentSoulTime;
+	float m_distance = 0.f;
 	std::string m_texture;
 	std::shared_ptr<Animation> m_main;
 	std::shared_ptr<Sprite2D> m_shadow;
