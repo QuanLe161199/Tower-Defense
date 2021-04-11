@@ -76,10 +76,10 @@ void GSSetting::Init()
 	m_listButton.push_back(button);
 
 	//exit button
-	texture = ResourceManagers::GetInstance()->GetTexture("button_quit");
+	texture = ResourceManagers::GetInstance()->GetTexture("button_reduction");
 	button = std::make_shared<GameButton>(model, shader, texture);
 	button->Set2DPosition(screenWidth / 2, 600);
-	button->SetSize(200, 70);
+	button->SetSize(70, 70);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Menu);
 		if (m_music)

@@ -80,7 +80,7 @@ void GSPlay::Init()
 	button->Set2DPosition(25, 25);
 	button->SetSize(50, 50);
 	button->SetOnClick([]() {
-		GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Menu);
+		GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_RoundOption);
 		if (m_music)
 		{
 			ResourceManagers::GetInstance()->PauseSound("play.mp3");
@@ -403,14 +403,17 @@ void GSPlay::Update(float deltaTime)
 				{
 					if (it->m_selected == -1)
 					{
+						float maxPositionEnemy = 0;
 						for (register int i = 0; i < numEnemies; i++)
 						{
 							// ưhen the distance is less than the range
-							if ((sqrt((it->m_x - m_listEnemy[i]->m_x) * (it->m_x - m_listEnemy[i]->m_x) +
+							if (((sqrt((it->m_x - m_listEnemy[i]->m_x) * (it->m_x - m_listEnemy[i]->m_x) +
 								(it->m_y - m_listEnemy[i]->m_y) * (it->m_y - m_listEnemy[i]->m_y)) < it->m_range) &&
 								m_currentTime > m_listEnemy[i]->m_appearTime && m_listEnemy[i]->m_currentHealth > 0)
+								&& m_listEnemy[i]->m_distance > maxPositionEnemy)
 							{
 								it->m_selected = i;
+								maxPositionEnemy = m_listEnemy[i]->m_distance;
 							}
 						}
 					}

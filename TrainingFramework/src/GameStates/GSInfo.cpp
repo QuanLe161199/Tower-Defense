@@ -42,10 +42,10 @@ void GSInfo::Init()
 	m_infoLink->SetSize(200, 200);*/
 
 	//exit button
-	texture = ResourceManagers::GetInstance()->GetTexture("button_quit");
+	texture = ResourceManagers::GetInstance()->GetTexture("button_reduction");
 	m_button = std::make_shared<GameButton>(model, shader, texture);
-	m_button->Set2DPosition(screenWidth / 2, 650);
-	m_button->SetSize(200, 70);
+	m_button->Set2DPosition(screenWidth / 2, 600);
+	m_button->SetSize(70, 70);
 	m_button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Menu);
 		if (m_music)
@@ -105,7 +105,7 @@ void GSInfo::HandleMouseMoveEvent(int x, int y)
 
 void GSInfo::Update(float deltaTime)
 {
-	// turn on music when start
+	/// turn on music when start
 	if (m_music && m_musicPrevious && m_time < 0.001)
 	{
 		ResourceManagers::GetInstance()->PlaySound("setting.mp3", true);
